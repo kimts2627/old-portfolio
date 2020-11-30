@@ -23,21 +23,14 @@ class App extends React.Component<Props, State> {
           "title": "Todo List App",
           "stack": "HTML/CSS/React/JS",
           "detail": "JSX의 기본 문법을 활용한 Todo App 입니다.\n다양한 디바이스를 통해 이용 가능하게 3단 레이아웃 반응형으로 제작 하였습니다.",
-          "pic": "./image/todo.png"
+          "pic": "./images/todo.png"
         },
         {
-          "id": 1,
+          "id": 2,
           "title": "Todo List App",
           "stack": "HTML/CSS/React/JS",
           "detail": "JSX의 기본 문법을 활용한 Todo App 입니다.\n다양한 디바이스를 통해 이용 가능하게 3단 레이아웃 반응형으로 제작 하였습니다.",
-          "pic": "./image/todo.png"
-        },
-        {
-          "id": 1,
-          "title": "Todo List App",
-          "stack": "HTML/CSS/React/JS",
-          "detail": "JSX의 기본 문법을 활용한 Todo App 입니다.\n다양한 디바이스를 통해 이용 가능하게 3단 레이아웃 반응형으로 제작 하였습니다.",
-          "pic": "./image/todo.png"
+          "pic": "images/todo.png"
         }
       ]
     }
@@ -54,10 +47,11 @@ class App extends React.Component<Props, State> {
         <Sidebar isSidebarOn={this.state.isSidebarOn} handleProfileClick={this.handleProfileClick}/>
         <Main portfolios={this.state.portfolios}/>
         <Title />
-        <Nav />
+        <Nav/>
         <div className="Title-power">Powered By React and TypeScript</div>
+        
         <div className="Title-profile" onClick={this.handleProfileClick}>
-          Profile
+          {this.state.isSidebarOn ? null : "Profile"}
         </div>
         <div className="Title-name">Kim Taesu</div>
       </div>
