@@ -1,12 +1,19 @@
 import React from 'react';
 
-function Main() {
+interface MainProps {
+  portfolios: Array<object>
+}
+
+function Main(props: MainProps) {
+  const {portfolios} = props;
   return (
     <main className="main-container">
       <div className="dummy"/>
       <div className="main-left"/>
       <div className="main-right"/>
-      <p className="footer">I</p>
+      <footer className="scrollbar">
+        {portfolios.map((el: any) => <p className="scrollbar-el" key={el.id}>I</p>)}
+      </footer>
     </main>
   )
 }

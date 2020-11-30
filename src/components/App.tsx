@@ -24,6 +24,20 @@ class App extends React.Component<Props, State> {
           "stack": "HTML/CSS/React/JS",
           "detail": "JSX의 기본 문법을 활용한 Todo App 입니다.\n다양한 디바이스를 통해 이용 가능하게 3단 레이아웃 반응형으로 제작 하였습니다.",
           "pic": "./image/todo.png"
+        },
+        {
+          "id": 1,
+          "title": "Todo List App",
+          "stack": "HTML/CSS/React/JS",
+          "detail": "JSX의 기본 문법을 활용한 Todo App 입니다.\n다양한 디바이스를 통해 이용 가능하게 3단 레이아웃 반응형으로 제작 하였습니다.",
+          "pic": "./image/todo.png"
+        },
+        {
+          "id": 1,
+          "title": "Todo List App",
+          "stack": "HTML/CSS/React/JS",
+          "detail": "JSX의 기본 문법을 활용한 Todo App 입니다.\n다양한 디바이스를 통해 이용 가능하게 3단 레이아웃 반응형으로 제작 하였습니다.",
+          "pic": "./image/todo.png"
         }
       ]
     }
@@ -38,7 +52,7 @@ class App extends React.Component<Props, State> {
     return (
       <div className='App'>
         <Sidebar isSidebarOn={this.state.isSidebarOn} handleProfileClick={this.handleProfileClick}/>
-        <Main />
+        <Main portfolios={this.state.portfolios}/>
         <Title />
         <Nav />
         <div className="Title-power">Powered By React and TypeScript</div>

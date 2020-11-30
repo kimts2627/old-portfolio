@@ -89,7 +89,7 @@ table {
   width: 60%;
   height: 95%;
 }
-
+/*
 .Sidebar {
   background-color: rgb(10, 10, 10);
   display: flex;
@@ -104,7 +104,7 @@ table {
   font-size: 1.4em;
   line-height: 1.5em;
   justify-content: space-between;
-  transition: all .3s;
+  transform:translate(200px,0);
 }
 
 .Sidebar-off {
@@ -121,7 +121,37 @@ table {
   font-size: 1.4em;
   line-height: 1.5em;
   justify-content: space-between;
-  transition: all .3s;
+  transform:translate(200px,0);
+}
+*/
+.Sidebar {
+  width: 40%;
+  height: 100%;
+  background-color: rgb(10, 10, 10);
+  display: flex;
+  color: white;
+  padding-left: 3rem;
+  padding-right: 1rem;
+  font-size: 1.4em;
+  line-height: 1.5em;
+  justify-content: space-between;
+  transition: all 0.3s;
+  transform: translate(0%);
+}
+
+.Sidebar-off {
+  width: 0%;
+  height: 100%;
+  background-color: rgb(10, 10, 10);
+  display: flex;
+  color: white;
+  padding-left: 3rem;
+  padding-right: 1rem;
+  font-size: 1.4em;
+  line-height: 1.5em;
+  justify-content: space-between;
+  transition: all 0.3s;
+  transform: translate(100%);
 }
 
 .intro, .school, .address, .get-in-touch {
@@ -159,7 +189,10 @@ table {
   font-size: 1rem;
 }
 
-.footer {
+.scrollbar {
+  display: flex;
+}
+.scrollbar-el {
   margin-top: 1em;
 }
 
