@@ -24,7 +24,8 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
+  vertical-align: baseline;
+  box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -52,30 +53,135 @@ table {
 
 
 .App {
-  align-items: center;
-  height: 100%;
   display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+}
+
+.main-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 85%;
+  top: 30%;
+  z-index: 1;
+  transition: 5s;
+}
+
+.main-left, .main-right {
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  height: 85%;
+  width: 35%;
+}
+
+.main-right {
+  left: 65%;
 }
 
 .dummy {
   background-image: url(./image/IMG_1786.jpeg);
   background-size: cover;
-  width: 100%;
-  height: 100vh;
+  width: 60%;
+  height: 95%;
 }
 
 .Sidebar {
-  position: absolute;
-  border: 1px solid black;
-  background-color: honeydew;
+  background-color: rgb(10, 10, 10);
   display: flex;
-  width: 25%;
-  height: 100vh;
+  left: 60%;
+  width: 40%;
+  height: 100%;
+  z-index: 2;
+  color: white;
+  padding: 2rem;
+  padding-left: 3rem;
+  padding-right: 1rem;
+  font-size: 1.4em;
+  line-height: 1.5em;
+  justify-content: space-between;
+  transition: all .3s;
 }
 
-.fas.fa-envelope {
-  margin-left: 50%;
-  font-size: 3rem;
-  color: green;
+.Sidebar-off {
+  background-color: rgb(10, 10, 10);
+  display: none;
+  left: 60%;
+  width: 40%;
+  height: 100%;
+  z-index: 2;
+  color: white;
+  padding: 2rem;
+  padding-left: 3rem;
+  padding-right: 1rem;
+  font-size: 1.4em;
+  line-height: 1.5em;
+  justify-content: space-between;
+  transition: all .3s;
 }
+
+.intro, .school, .address, .get-in-touch {
+  margin-bottom: 3em;
+}
+
+.school p, .address p, .get-in-touch p {
+  font-size: 1.3rem;
+  color: rgb(173, 173, 173)
+}
+
+.school div, .address div, .get-in-touch div {
+  font-size: 1.2rem;
+  line-height: 1.2em;
+}
+
+.intro {
+  margin-top: 2em;
+}
+
+.Sidebar-nav {
+  text-align: left;
+}
+.Sidebar-nav div{
+  font-size: 0.7em;
+}
+
+.fab.fa-github {
+  margin-top: 24em;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.Sidebar span {
+  font-size: 1rem;
+}
+
+.footer {
+  margin-top: 1em;
+}
+
+.Title-power {
+  position: absolute;
+  bottom: 2em;
+  left: 2em;
+  font-size: 0.5rem;
+  color: grey;
+}
+
+.Title-profile {
+  position: absolute;
+  top: 2em;
+  right: 2em;
+}
+
+.Title-name {
+  position: absolute;
+  top: 2em;
+  left: 2em;
+}
+
+
 

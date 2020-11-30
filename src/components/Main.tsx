@@ -2,8 +2,11 @@ import React from 'react';
 
 function Main() {
   return (
-    <main className="dummy">
-      <i className="fas fa-envelope"></i>
+    <main className="main-container">
+      <div className="dummy"/>
+      <div className="main-left"/>
+      <div className="main-right"/>
+      <p className="footer">I</p>
     </main>
   )
 }
