@@ -1,9 +1,8 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+//import { BrowserRouter } from 'react-router-dom';
 import  Sidebar from './Sidebar';
 import  Main from './Main';
 import  Title from './Title';
-import  Nav from './Nav';
 import '../App.css';
 
 interface Props {};
@@ -47,7 +46,6 @@ class App extends React.Component<Props, State> {
         <Sidebar isSidebarOn={this.state.isSidebarOn} handleProfileClick={this.handleProfileClick}/>
         <Main portfolios={this.state.portfolios}/>
         <Title />
-        <Nav/>
         <div className="Title-power">Powered By React and TypeScript</div>
         
         <div className="Title-profile" onClick={this.handleProfileClick}>
