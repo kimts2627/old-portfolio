@@ -231,7 +231,7 @@ table {
   transition: all .20s cubic-bezier(.77,0,.175,1);
 }
 .scrollbar-el-up {
-  margin-top: 0.9em;
+  margin-top: 0.8em;
   transition: all .20s cubic-bezier(.77,0,.175,1);
 }
 .Title-power {
