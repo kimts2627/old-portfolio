@@ -58,11 +58,12 @@ table {
   align-items: center;
   height: 100vh;
   justify-content: center;
-  overflow: hidden;
   font-family: 'Noto Sans KR', sans-serif;
+  overflow: hidden;
 }
 
 .main-container {
+  margin-left: 4em;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -74,16 +75,22 @@ table {
 }
 
 
-.main-left, .main-right {
+.main-left {
   position: absolute;
   top: 7%;
   left: 0%;
   height: 85%;
   width: 35%;
+  cursor: url(/src/components/images/arrow-left.png), auto;
 }
 
 .main-right {
-  left: 65%;
+  position: absolute;
+  top: 7%;
+  right: 0%;
+  height: 85%;
+  width: 35%;
+  cursor: url(/src/components/images/arrow-right.png), auto;
 }
 
 .dummy {
@@ -94,13 +101,26 @@ table {
   height: 95%;
   overflow: hidden;
   align-items: center;
+  transition: all .30s cubic-bezier(.77,0,.175,1);
 }
 
 .dummy img {
   width: 110%;
   height: auto;
   margin-top: 10em;
+  z-index: 200;
+  transition: all .30s cubic-bezier(.77,0,.175,1);
 }
+
+.dummy img:hover {
+  filter: brightness(30%);
+  transition: all .35s cubic-bezier(.77,0,.175,1);
+}
+.dummy:hover {
+  width: 75%;
+  transition: all .30s cubic-bezier(.77,0,.175,1);
+}
+
 
 /*
 .Sidebar {
@@ -208,8 +228,12 @@ table {
 }
 .scrollbar-el {
   margin-top: 1em;
+  transition: all .20s cubic-bezier(.77,0,.175,1);
 }
-
+.scrollbar-el-up {
+  margin-top: 0.9em;
+  transition: all .20s cubic-bezier(.77,0,.175,1);
+}
 .Title-power {
   position: absolute;
   bottom: 2em;
