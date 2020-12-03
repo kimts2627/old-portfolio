@@ -51,6 +51,9 @@ table {
 	border-spacing: 0;
 }
 
+.root {
+  transition: all .85s cubic-bezier(.77,0,.175,1);
+}
 
 .App {
   display: flex;
@@ -60,6 +63,22 @@ table {
   justify-content: center;
   font-family: 'Noto Sans KR', sans-serif;
   overflow: hidden;
+  transition: all .85s cubic-bezier(.77,0,.175,1);
+}
+
+.Start-wrap {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all .85s cubic-bezier(.77,0,.175,1);
+}
+
+.Start-name {
+  display: block;
+  font-size: 5em;
 }
 
 .main-container {
@@ -189,10 +208,14 @@ table {
 }
 .scrollbar-el {
   margin-top: 1em;
+  margin-left: 0.1em;
+  margin-right: 0.1em;
   transition: all .20s cubic-bezier(.77,0,.175,1);
 }
 .scrollbar-el-up {
-  margin-top: 0.8em;
+  margin-top: 0.7em;
+  margin-left: 0.1em;
+  margin-right: 0.1em;
   transition: all .20s cubic-bezier(.77,0,.175,1);
 }
 .Title-power {

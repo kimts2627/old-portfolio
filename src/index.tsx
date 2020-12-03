@@ -3,10 +3,27 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
+import Startpage from './components/Startpage';
+
+setTimeout(   // ------------------- 입장 페이지 진행 후 약 4초후 메인 페이지 렌더
+  renderMain,
+  3000
+)
+
+function renderMain() {
+  return(
+    ReactDOM.render(
+      <React.StrictMode>
+        <App/>
+      </React.StrictMode>,
+      document.getElementById('root')
+    )
+  )
+}
 
 ReactDOM.render(
   <React.StrictMode>
-    <App/>
+    <Startpage/>
   </React.StrictMode>,
   document.getElementById('root')
 );
