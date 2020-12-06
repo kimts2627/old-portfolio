@@ -66,8 +66,8 @@ class App extends React.Component<Props, State> {
     this.handleMouseOver = this.handleMouseOver.bind(this);
   }
 
-  componentDidUpdate() {
-    
+  componentDidMount() {
+    this.state.isHover ? this.setState({ isHover: false }) : this.setState({ isHover: false })
   }
 
   private handleProfileClick(): void {

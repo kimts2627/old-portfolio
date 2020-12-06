@@ -15,9 +15,9 @@ function Main(props: MainProps) {
   const {portfolios, currentNum, isSidebarOn, isHover, handleCountPlusClick, handleMouseOver, handleCountMinusClick} = props;
   return (
     <main className="main-container">
-      <div className="dummy" onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOver}>
-        <img className={isHover ? "img-hover" : "img"} src={portfolios[currentNum].pic} alt=""/>
-        {isHover ?
+      <div className="dummy" onMouseEnter={isHover ? undefined : handleMouseOver} onMouseLeave={handleMouseOver}>
+        <img className={isHover && !isSidebarOn ? "img-hover" : "img"} src={portfolios[currentNum].pic} alt=""/>
+        {isHover && !isSidebarOn ?
         <div className="img-info">
           <p className="img-title">{portfolios[currentNum].title}</p>
           <p className="img-stack">{portfolios[currentNum].stack}</p>
@@ -25,8 +25,8 @@ function Main(props: MainProps) {
         </div>
         : null}
       </div>
-      <div className="main-left" onClick={isSidebarOn ? undefined : handleCountMinusClick}/>
-      <div className="main-right" onClick={isSidebarOn ? undefined : handleCountPlusClick}/>
+      <div className={!isSidebarOn ? "main-left" : ''} onClick={isSidebarOn ? undefined : handleCountMinusClick}/>
+      <div className={!isSidebarOn ? "main-right" : ''} onClick={isSidebarOn ? undefined : handleCountPlusClick}/>
       <footer className="scrollbar">
         {portfolios.map((el: any, index: number) => index === currentNum ? <p className="scrollbar-el-up" key={el.id}>I</p> : <p className="scrollbar-el" key={el.id}>I</p>)}
       </footer>

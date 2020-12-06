@@ -5,7 +5,7 @@ import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 import Startpage from './components/Startpage';
 
-setTimeout(   // ------------------- 입장 페이지 진행 후 약 4초후 메인 페이지 렌더
+setTimeout(   // ------------------- 입장 페이지 진행 후 약 3초후 메인 페이지 렌더
   renderMain,
   3000
 )
