@@ -1,20 +1,29 @@
 import React from 'react';
-import ImgSrc from './images/IMG_1786.jpeg';
 
 interface MainProps {
   portfolios: Array<object | any>,
   currentNum: number,
   isSidebarOn: boolean,
+  isHover: boolean,
   handleCountPlusClick: () => void,
-  handleCountMinusClick: () => void
+  handleCountMinusClick: () => void,
+  handleMouseOver: () => void
 }
 
+
 function Main(props: MainProps) {
-  const {portfolios, currentNum, isSidebarOn, handleCountPlusClick, handleCountMinusClick} = props;
+  const {portfolios, currentNum, isSidebarOn, isHover, handleCountPlusClick, handleMouseOver, handleCountMinusClick} = props;
   return (
     <main className="main-container">
-      <div className="dummy">
-        <img src={portfolios[currentNum].pic} alt=""/>
+      <div className="dummy" onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOver}>
+        <img className={isHover ? "img-hover" : "img"} src={portfolios[currentNum].pic} alt=""/>
+        {isHover ?
+        <div className="img-info">
+          <p className="img-title">{portfolios[currentNum].title}</p>
+          <p className="img-stack">{portfolios[currentNum].stack}</p>
+          <p className="img-desc">{portfolios[currentNum].detail}</p>
+        </div>
+        : null}
       </div>
       <div className="main-left" onClick={isSidebarOn ? undefined : handleCountMinusClick}/>
       <div className="main-right" onClick={isSidebarOn ? undefined : handleCountPlusClick}/>

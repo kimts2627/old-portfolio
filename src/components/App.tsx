@@ -11,7 +11,8 @@ interface Props {};
 interface State {
   isSidebarOn: boolean,
   portfolios: Array<object>,
-  currentNum: number
+  currentNum: number,
+  isHover: boolean
 };
 
 class App extends React.Component<Props, State> {
@@ -19,12 +20,13 @@ class App extends React.Component<Props, State> {
     super(props);
     this.state = {
       isSidebarOn: false,
+      isHover: false,
       portfolios: [
         {
           "id": 1,
-          "title": "Todo List App",
-          "stack": "HTML/CSS/React/JS",
-          "detail": "JSX의 기본 문법을 활용한 Todo App 입니다.\n다양한 디바이스를 통해 이용 가능하게 3단 레이아웃 반응형으로 제작 하였습니다.",
+          "title": "Kim Taesu",
+          "stack": "HTML/CSS/React/JS/TS/Node.js",
+          "detail": null,
           "pic": MyImg
         },
         {
@@ -61,6 +63,7 @@ class App extends React.Component<Props, State> {
     this.handleProfileClick = this.handleProfileClick.bind(this);
     this.handleCountPlusClick = this.handleCountPlusClick.bind(this);
     this.handleCountMinusClick = this.handleCountMinusClick.bind(this);
+    this.handleMouseOver = this.handleMouseOver.bind(this);
   }
 
   componentDidUpdate() {
@@ -87,16 +90,22 @@ class App extends React.Component<Props, State> {
     }
   }
 
+  private handleMouseOver() : void {
+    this.setState({ isHover: !this.state.isHover });
+  }
+
   public render() {
     return (
       <div className='App'>
         <Sidebar isSidebarOn={this.state.isSidebarOn} handleProfileClick={this.handleProfileClick}/>
         <Main
+        isHover={this.state.isHover}
         portfolios={this.state.portfolios}
         currentNum={this.state.currentNum}
         isSidebarOn={this.state.isSidebarOn}
         handleCountPlusClick={this.handleCountPlusClick}
         handleCountMinusClick={this.handleCountMinusClick}
+        handleMouseOver={this.handleMouseOver}
         />
         <Title />
         <div className="Title-power">Powered By React and TypeScript</div>
