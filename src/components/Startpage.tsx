@@ -34,7 +34,4 @@ class Startpage extends React.Component<Startprops, Startstate> {
   }
 }
 
-
-
-
 export default Startpage;

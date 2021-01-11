@@ -1,11 +1,3 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-/* for fontawesome */
-
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -27,7 +19,6 @@ time, mark, audio, video {
   vertical-align: baseline;
   box-sizing: border-box;
 }
-/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -50,6 +41,8 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* -------------------------------------------------------------------------------*/
 
 .root {
   overflow: hidden;
@@ -111,14 +104,13 @@ table {
   transition: all .85s cubic-bezier(.77,0,.175,1);
 }
 
-
 .main-left {
   position: absolute;
   top: 7%;
   left: 0%;
   height: 85%;
   width: 35%;
-  cursor: url(/src/components/images/arrow-left.png), auto;
+  cursor: url('./components/images/arrow-left.png'), auto;
 }
 
 .main-right {
@@ -127,7 +119,7 @@ table {
   right: 0%;
   height: 85%;
   width: 35%;
-  cursor: url(/src/components/images/arrow-right.png), auto;
+  cursor: url('./components/images/arrow-right.png'), auto;
 }
 
 .dummy {
@@ -286,5 +278,44 @@ table {
   left: 2em;
 }
 
+@media (max-width: 1600px) {
+  .intro, .school, .address, .get-in-touch { margin-bottom: 2em }
+}
+
+@media (max-width: 1200px) {
+  .Sidebar {
+    font-size: 1em;
+    line-height: 1.4em;
+  }
+  
+  .Sidebar-off {
+    font-size: 1em;
+    line-height: 1.4em;
+  }
+
+  .intro, .school, .address, .get-in-touch {
+    margin-bottom: 2em;
+  }
+  
+  .school p, .address p, .get-in-touch p {
+    font-size: 1.3rem;
+    color: rgb(173, 173, 173)
+  }
+  
+  .school div, .address div, .get-in-touch div {
+    font-size: 1.1rem;
+    line-height: 1.2em;
+  }
+
+  .fab.fa-github {
+    margin-top: 24em;
+    font-size: 1.5em;
+    font-weight: 500;
+  }
+  
+  .Sidebar span {
+    font-size: 1rem;
+  }
+}
 
 

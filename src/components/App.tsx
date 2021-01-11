@@ -1,11 +1,10 @@
 import React from 'react';
-//import { BrowserRouter } from 'react-router-dom';
 import  Sidebar from './Sidebar';
 import  Main from './Main';
 import  Title from './Title';
 import MyImg from './images/IMG_1786.jpeg';
 import TodoImg from './images/todo.png';
-import '../App.css';
+import '../style.scss';
 
 interface Props {};
 interface State {

@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './components/App';
-import reportWebVitals from './reportWebVitals';
 import Startpage from './components/Startpage';
 
 setTimeout(   // ------------------- 입장 페이지 진행 후 약 3초후 메인 페이지 렌더
@@ -13,22 +11,13 @@ setTimeout(   // ------------------- 입장 페이지 진행 후 약 3초후 메
 function renderMain() {
   return(
     ReactDOM.render(
-      <React.StrictMode>
-        <App/>
-      </React.StrictMode>,
+      <App/>,
       document.getElementById('root')
     )
   )
 }
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Startpage/>
-  </React.StrictMode>,
+  <Startpage/>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
